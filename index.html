@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <title>moonlight</title>
+  </head>
+  <body>
+    <section>
+      <img src="PNGs/bg.jpg" id="bg" />
+      <img src="PNGs/moon.png" id="moon" />
+      <img src="PNGs/mountain.png" id="mountain" />
+      <img src="PNGs/road.png" id="road" />
+      <h2 id="text">moon light</h2>
+    </section>
+    <div>
+      <h1>Moon light parallax website interface</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+        molestias?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dolorum, molestias?Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dolorum, molestias?Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Dolorum, molestias?Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Dolorum, molestias?
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        totam ab expedita animi fugit veritatis veniam omnis ullam, illo
+        necessitatibus libero minima ipsum modi reiciendis ea dignissimos soluta
+        nostrum rem? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dolorum, molestias?Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dolorum, molestias?Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Dolorum, molestias?Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Dolorum, molestias?Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Dolorum, molestias?
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        totam ab expedita animi fugit veritatis veniam omnis ullam, illo
+        necessitatibus libero minima ipsum modi reiciendis ea dignissimos soluta
+        nostrum rem?
+      </p>
+    </div>
+    <script type="text/javascript">
+      let bg = document.getElementById("bg");
+      let moon = document.getElementById("moon");
+      let mountain = document.getElementById("mountain");
+      let road = document.getElementById("road");
+      let text = document.getElementById("text");
+
+      window.addEventListener("scroll", function () {
+        var value = window.scrollY;
+        bg.style.top = value * 0.5 + "px";
+        moon.style.left = -value * 0.5 + "px";
+        mountain.style.top = -value * 0.15 + "px";
+        road.style.top = value * 0.15 + "px";
+        text.style.bottom = -value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
